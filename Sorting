@@ -1,0 +1,126 @@
+// Bo qua heap va shell sort.
+
+public class Main {
+    public static void main(String[] args) {
+        public void swap (int arr [], int num1, int num2) {
+            int temp = arr [num1];
+            arr [num1] = arr [num2];
+            arr [num2] = temp;
+        }
+        //Bubble sort
+        int arr[10] = {45,23,65,246,657,5335,7567,6235,63476,8756};
+        public void bubbleSort(int arr[], int n){
+            for(int i=0; i<n-1; i++){
+                for(int j=0; j<n-i-1; j++){
+                    if(arr[j]> arr[j+1]){
+                        int tmp = arr[j];
+                        arr[j] = arr[j+1];
+                        arr[j+1] = tmp;
+                    }
+                }
+            }
+        }
+
+        //Insertion sort
+        public void insertionSort(int arr[], int n){
+            int tmp;
+            int flag;
+            for(int j=1; j<n; j++){
+                int i = j-1;
+                tmp = arr[j];
+                while((i>=0) && (tmp<arr[i]){
+                    arr[i+1] = arr[i];
+                    i--;
+                }
+                arr[i+1] = tmp;
+            }
+        }
+        //Sellection sort
+
+        //bo qua heap va shell sort
+
+        //quick sort
+        public void quickSort(int arr[], int n){
+            
+        // ham de chia mang thanh 2 phan, su dung phan tu chot (pivot)
+        public int partition (int arr [], int left, int right, int pivot) {
+            int leftPointer = left - 1;
+            int rightPointer = right;
+            while (true) {
+                while (arr [++leftPointer] < pivot) {
+                    // khong lam gi
+                }
+                while (rightPointer > 0 && arr [--rightPointer] > pivot) {
+                    // khong lam gi
+                }
+                if (leftPointer >= rightPointer) {
+                    break;
+                } else {
+                    System.out.println (" Phan tu duoc trao doi: " + arr [leftPointer] + ", " + arr [rightPointer]);
+                    swap (arr, leftPointer, rightPointer);
+                }
+            }
+            System.out.println (" Phan tu chot duoc trao doi: " + arr [leftPointer] + ", " + arr [right]);
+            swap (arr, leftPointer, right);
+            display (arr);
+            return leftPointer;
+        }
+
+        // ham sap xep
+        public void quickSort (int arr [], int left, int right) {
+            if (right - left <= 0) {
+                return;
+            } else {
+                int pivot = arr [right];
+                int partitionPoint = partition (arr, left, right, pivot);
+                quickSort (arr, left, partitionPoint - 1);
+                quickSort (arr, partitionPoint + 1, right);
+            }
+        }
+
+        public void display (int arr []) {
+            int i;
+            System.out.print (" [");
+            // Duyet qua tat ca phan tu
+            for (i = 0; i < arr.length; i++) {
+                System.out.print (arr [i] + " ");
+            }
+            System.out.print ("]\n");
+        }
+
+        public static void main (String [] args) {
+            // khoi tao mang arr
+            int arr [] = { 6, 7, 0, 2, 8, 1, 3, 9, 4, 5 };
+            SapXepNhanh sapXepNhanh = new SapXepNhanh ();
+            System.out.println ("Mang du lieu dau vao: ");
+            sapXepNhanh.display (arr);
+            System.out.println ("-----------------------------");
+            sapXepNhanh.quickSort (arr, 0, arr.length - 1);
+            System.out.println ("-----------------------------");
+            System.out.println ("\nMang sau khi da sap xep: ");
+            sapXepNhanh.display (arr);
+        }
+    }
+        //chia lam 2 phan sau do thuc hien sap xep tren 2 mang do
+
+        //tree sort
+
+        //binary insertion sort
+        //thuc hien sap xep theo hinh cay sau do loai bo phan tu gan cuoi
+        public void binarySort(int arr[],int n){
+            int last;
+            !(2n + 2)
+            !(2n +1)
+            if(2n +1 > 2n +2){
+                int tmp = arr[2n+1];
+                arr[2n+1] = arr[2n+2];
+                arr[2n+2] = tmp;
+            }
+            last  = arr[2n+2];
+            
+        }
+
+        //
+
+    }
+}
