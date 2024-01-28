@@ -1,0 +1,39 @@
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+//        tuần này làm cho e bài thực hiện sắp xếp 1 mảng theo các thuật toán sắp xếp đã tìm hiểu trước đó
+//        bỏ qua Heap sort với shell sort
+//        xong tìm hiểu về binary tree search
+        //quick sort
+        int[] arr = {10, 7, 8, 9, 1, 5};
+        int n = arr.length;
+        Sort vidu = new Sort();
+        System.out.println("Bubble sort");
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+    //selection sort
+        int[] arr1 = {9, 14, 3, 2, 43, 11, 58, 22};
+        System.out.println("\n\nBefore Selection Sort");
+        for (int i : arr1) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        vidu.selectionSort(arr1); // sorting array using selection sort
+        System.out.println("After Selection Sort");
+        for (int i : arr1) {
+            System.out.print(i + " ");
+        }
+        //insertion sort
+
+        System.out.println("\n\nBefore Insertion Sort: " + Arrays.toString(arr1));
+        vidu.insertionSort(arr1); // sorting array using insertion sort
+        System.out.println("After Insertion Sort: " + Arrays.toString(arr1));
+        //Merge sort
+
+        System.out.println("\n\nBefore Merge Sort: " + Arrays.toString(arr1));
+        vidu.mergeSort(arr1, 0, arr.length - 1); // sorting array using merge sort
+        System.out.println("After Merge Sort: " + Arrays.toString(arr1));
+    }
+}
